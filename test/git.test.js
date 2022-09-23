@@ -18,7 +18,7 @@ describe("Testing GitCommand.status()", function(){
         expect(output).to.equal('You have 2 change/s.\nviews/index.html\nassets/scripts/index.js');
     });
 
-    it('Sh', function(){
+    it('Should return information if no changes in directory', function(){
         let wd = new WorkingDirectory();
         let git = new GitCommand(wd);
         let output = git.status();
